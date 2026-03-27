@@ -1,11 +1,11 @@
 // Strict interface defining exactly what data this component accepts
 interface GreetingProps {
-  name: string;
+  name?: string;
   role?: "HR" | "Employee";
 }
 
 export const Greeting: React.FC<GreetingProps> = ({
-  name,
+  name = "John",
   role = "Employee",
 }) => {
   return (
